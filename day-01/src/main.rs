@@ -19,7 +19,7 @@ fn calc_fuel(module: i32) -> i32 {
 
 fn main() -> std::io::Result<()> {
     let sum: i32 = fs::read_to_string("input")?
-        .split("\n")
+        .split('\n')
         .filter_map(|s| s.parse::<i32>().ok())
         .map(calc_fuel)
         .sum();
